@@ -76,20 +76,18 @@ void main (void)
   setlocale(LC_ALL, "Portuguese"); //Ativa a configuração da biblioteca locale.h para português
 
   opcao=menu(  );//opcao recebe a opção digitada pelo usuário
-  While (opcao < 5 && opcao>0)
+  While (opcao != 5)
   {
-        switch(opcoes)
-       {
-	Case 1: area=calcQuadrado(  );
-	                break;
-	Case 2: area=calcRetangulo(  );
-	                break;
-	Case 3: area=calcCirculo(  );
-	                break;
-                  default: area=calcTrapezio(  );
-       }
-            printf ("%.2f",area);
-            opcao=menu(   );
+    	if (opcao == 1)
+           		 area=calcQuadrado(  );
+     	else   if (opcao == 2)
+		area=calcRetangulo(  );
+	else   if (opcao == 3)
+		area=calcCirculo(  );
+	else
+                          	area=calcTrapezio(  );
+                printf ("%.2f",area);
+                opcao=menu(   );
   } // Fim do while
  system("PAUSE");
 }
